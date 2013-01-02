@@ -36,7 +36,9 @@ Unusual SMTP server port. Default to 25.
 
 sub new
 {
-    my $class = shift;
+    my $this = shift;
+    my $class = ref $this || $this;
+
     my %p = validate
     (
         @_

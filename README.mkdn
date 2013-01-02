@@ -1,0 +1,89 @@
+# NAME
+
+Log::Dispatch::Email::EmailSender - Subclass of Log::Dispatch::Email that uses Email::Sender
+
+# VERSION
+
+version 0.130010
+
+# SYNOPSIS
+
+    use Log::Dispatch;
+
+    my $log = Log::Dispatch->new(
+        outputs => [
+            [
+                'Email::EmailSender'
+            ,   min_level => 'emerg'
+            ,   to        => [qw( foo@example.com bar@example.org )]
+            ,   subject   => 'Big error!'
+            ]
+        ]
+    );
+
+    $log->emerg("Something bad is happening");
+
+or you can specify a transport:
+
+    use Log::Dispatch;
+
+    my $log = Log::Dispatch->new(
+        outputs => [
+            [
+                'Email::EmailSender'
+            ,   min_level => 'emerg'
+            ,   smtp      => 'smtp.foo.com'
+            ,   port      => 9856
+            ,   to        => [qw( foo@example.com bar@example.org )]
+            ,   subject   => 'Big error!'
+            ]
+        ]
+    );
+
+    $log->emerg("Something bad is happening");
+
+# DESCRIPTION
+
+This is a subclass of Log::Dispatch::Email that implements the send\_email method using the [Email::Sender](http://search.cpan.org/perldoc?Email::Sender) module.
+
+# METHODS
+
+## new
+
+The constructor can take the following optional parameters in addition to the standard parameters documented
+in [Log::Dispatch::Email](http://search.cpan.org/perldoc?Log::Dispatch::Email):
+
+- smtp ($)
+
+    SMTP server.
+
+- port ($)
+
+    Unusual SMTP server port. Default to 25.
+
+## send\_email
+
+The [Log::Dispatch::Email](http://search.cpan.org/perldoc?Log::Dispatch::Email) subclassed method.
+
+# SEE ALSO
+
+[Log::Dispatch::Email::MIMELite](http://search.cpan.org/perldoc?Log::Dispatch::Email::MIMELite)
+
+[Log::Dispatch::Email::MailSend](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSend)
+
+[Log::Dispatch::Email::EmailSend](http://search.cpan.org/perldoc?Log::Dispatch::Email::EmailSend)
+
+[Log::Dispatch::Email::MailSender](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSender)
+
+[Log::Dispatch::Email::MailSendmail](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSendmail)
+
+# AUTHOR
+
+Loïc TROCHET <losyme@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Loïc TROCHET.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
