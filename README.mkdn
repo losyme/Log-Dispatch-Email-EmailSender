@@ -4,7 +4,7 @@ Log::Dispatch::Email::EmailSender - Subclass of Log::Dispatch::Email that uses E
 
 # VERSION
 
-version 0.130010
+version 0.130020
 
 # SYNOPSIS
 
