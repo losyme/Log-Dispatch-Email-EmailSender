@@ -5,6 +5,7 @@ Revision history
 {{$NEXT}}
 
 0.150390  2015-02-08 16:44:21+01:00 Europe/Paris
+          Replace 'sendmail' by 'try_to_sendmail'
 
 0.130020  2013-01-02 22:11:07 Europe/Paris
           First version, released by LOSYME
