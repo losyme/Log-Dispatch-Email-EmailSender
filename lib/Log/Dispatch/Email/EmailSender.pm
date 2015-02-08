@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use Params::Validate qw(validate SCALAR);
-use Email::Sender::Simple qw(sendmail);
+use Email::Sender::Simple qw(try_to_sendmail);
 use Email::Simple;
 use Email::Simple::Creator;
 use Email::Sender::Transport::SMTP;
@@ -87,7 +87,7 @@ sub send_email
     $args = {transport => Email::Sender::Transport::SMTP->new({host => $self->{smtp}, port => $self->{port}})}
         if exists $self->{smtp};
 
-    sendmail($email, $args);
+    try_to_sendmail($email, $args);
 }
 
 1;

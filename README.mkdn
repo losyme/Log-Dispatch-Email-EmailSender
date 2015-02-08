@@ -4,7 +4,7 @@ Log::Dispatch::Email::EmailSender - Subclass of Log::Dispatch::Email that uses E
 
 # VERSION
 
-version 0.130020
+version 0.150390
 
 # SYNOPSIS
 
@@ -44,14 +44,14 @@ or you can specify a transport:
 
 # DESCRIPTION
 
-This is a subclass of Log::Dispatch::Email that implements the send\_email method using the [Email::Sender](http://search.cpan.org/perldoc?Email::Sender) module.
+This is a subclass of Log::Dispatch::Email that implements the send\_email method using the [Email::Sender](https://metacpan.org/pod/Email::Sender) module.
 
 # METHODS
 
 ## new
 
 The constructor can take the following optional parameters in addition to the standard parameters documented
-in [Log::Dispatch::Email](http://search.cpan.org/perldoc?Log::Dispatch::Email):
+in [Log::Dispatch::Email](https://metacpan.org/pod/Log::Dispatch::Email):
 
 - smtp ($)
 
@@ -63,27 +63,27 @@ in [Log::Dispatch::Email](http://search.cpan.org/perldoc?Log::Dispatch::Email):
 
 ## send\_email
 
-The [Log::Dispatch::Email](http://search.cpan.org/perldoc?Log::Dispatch::Email) subclassed method.
+The [Log::Dispatch::Email](https://metacpan.org/pod/Log::Dispatch::Email) subclassed method.
 
 # SEE ALSO
 
-[Log::Dispatch::Email::MIMELite](http://search.cpan.org/perldoc?Log::Dispatch::Email::MIMELite)
+[Log::Dispatch::Email::MIMELite](https://metacpan.org/pod/Log::Dispatch::Email::MIMELite)
 
-[Log::Dispatch::Email::MailSend](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSend)
+[Log::Dispatch::Email::MailSend](https://metacpan.org/pod/Log::Dispatch::Email::MailSend)
 
-[Log::Dispatch::Email::EmailSend](http://search.cpan.org/perldoc?Log::Dispatch::Email::EmailSend)
+[Log::Dispatch::Email::EmailSend](https://metacpan.org/pod/Log::Dispatch::Email::EmailSend)
 
-[Log::Dispatch::Email::MailSender](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSender)
+[Log::Dispatch::Email::MailSender](https://metacpan.org/pod/Log::Dispatch::Email::MailSender)
 
-[Log::Dispatch::Email::MailSendmail](http://search.cpan.org/perldoc?Log::Dispatch::Email::MailSendmail)
+[Log::Dispatch::Email::MailSendmail](https://metacpan.org/pod/Log::Dispatch::Email::MailSendmail)
 
 # AUTHOR
 
-Loïc TROCHET <losyme@cpan.org>
+losyme <losyme@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Loïc TROCHET.
+This software is copyright (c) 2013 by losyme.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
