@@ -2,7 +2,7 @@
 Revision history
 ----------------
 
-{{$NEXT}}
+{{NEXT}}
 
 0.150390  2015-02-08 16:44:21+01:00 Europe/Paris
           Replace 'sendmail' by 'try_to_sendmail'
